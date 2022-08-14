@@ -9,7 +9,7 @@ struct GbxFileDict {
 }
 
 impl GbxFileDict {
-    fn new() -> GbxObjectDict {
+    fn new() -> GbxFileDict {
         let mut map = HashMap::new();
 
         map.insert(0x03043000, GbxFileType::Challenge);
@@ -50,7 +50,7 @@ impl GbxFileDict {
         map.insert(0x03029000, GbxFileType::MediaBlockTriangles);
         map.insert(0x030E5000, GbxFileType::MediaBlockGhost);
 
-        GbxObjectDict { map }
+        GbxFileDict { map }
     }
 }
 
